@@ -1200,6 +1200,12 @@ body.single nav.navigation {
     margin-bottom: 25px;
 }
 
+..comment-list  li.bypostauthor {
+    padding: 20px;
+    background: #ecf9f1;
+    border-left: 4px solid #85c39c;
+}
+
 .comments-area span.says, .comments-area .edit-link {
     display: none;
 }
