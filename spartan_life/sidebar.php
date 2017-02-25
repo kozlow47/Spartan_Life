@@ -33,12 +33,33 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     </div>
 
     <div class="aside_recent">
+        <h4>Recent Recipes</h4>
+
+        <div id="recent-posts">
+            <div <?php post_class(); ?> id="featured-<?php the_ID(); ?>">
+            <?php
+                $args = array( 'numberposts' => '3', 'meta_key' => '_thumbnail_id', 'post_status' => 'publish', 'orderby' => 'title', 'order' => 'DESC', 'category_name' => 'Recipes' );
+                $recent_posts = wp_get_recent_posts( $args );
+                foreach ( $recent_posts as $recent ) {
+                    if ( has_post_thumbnail( $recent["ID"] ) ) {
+                        echo '<a class="aside_img" href="' . get_permalink( $recent["ID"] ) . '">';
+                        echo get_the_post_thumbnail( $recent["ID"], 'archive_grid' );
+                        echo '</a>';
+                        echo '<a class="aside_title" href="' . get_permalink($recent["ID"]) . '">' .   ( __($recent["post_title"])).'</a>';
+                    }
+                }
+            ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="aside_recent">
         <h4>Recent Posts</h4>
 
         <div id="recent-posts">
             <div <?php post_class(); ?> id="featured-<?php the_ID(); ?>">
             <?php
-                $args = array( 'numberposts' => '10', 'meta_key' => '_thumbnail_id', 'post_status' => 'publish', 'orderby'=> 'title', 'order' => 'ASC' );
+                $args = array( 'numberposts' => '7', 'meta_key' => '_thumbnail_id', 'post_status' => 'publish' );
                 $recent_posts = wp_get_recent_posts( $args );
                 foreach ( $recent_posts as $recent ) {
                     if ( has_post_thumbnail( $recent["ID"] ) ) {
