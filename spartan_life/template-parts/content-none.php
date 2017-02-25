@@ -22,7 +22,7 @@
 
         <?php elseif ( is_search() ) : ?>
 
-            <p class="none"><?php esc_html_e( 'Whoops, nothing matched your search terms!', 'spartan_life' ); ?></p>
+            <p class="none"><?php esc_html_e( 'Sorry, no content matched your criteria.', 'spartan_life' ); ?></p>
             <?php
 
         else : ?>

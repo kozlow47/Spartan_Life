@@ -973,7 +973,7 @@ header#masthead {
     letter-spacing: 0.5px;
 }
 
-.main-navigation a:hover {
+.main-navigation a:hover, li.current-menu-item a {
     color: #000;
 }
 
@@ -1050,8 +1050,8 @@ body.home article {
 
 .aside_me p {
     color: #adadad;
-    font-size: .91rem;
-    line-height: 1.9rem;
+    font-size: .85rem;
+    line-height: 1.6rem;
 }
 
 aside#secondary h4 {
@@ -1060,11 +1060,41 @@ aside#secondary h4 {
     font-weight: 400;
 }
 
+.aside_buttons {
+    width: 100%;
+    float: left;
+    margin-top: 0px;
+}
+
+.aside_buttons a {
+    width: 100%;
+    text-align: center;
+    background: #b3dac1;
+    color: #fff !important;
+    text-transform: uppercase;
+    padding: 8px 0px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.aside_buttons a:hover {
+    background: #85c39c;
+    transition: 0.2s;
+}
+
+aside#secondary .aside_me {
+    float: left;
+    margin: 40px 0px 45px 0px;
+}
+
 .aside_title {
     text-decoration: none;
     margin-bottom: 40px;
     display: block;
-    font-size: 1.05rem;
+    font-size: 1rem;
     margin-top: 4px;
 }
 
@@ -1078,13 +1108,12 @@ aside#secondary h4 {
 .about_photo {
     background: url(img/photo_me.png);
     display: block;
-    width: 250px;
-    height: 250px;
+    width: 100px;
+    height: 100px;
     background-size: 100% auto;
     border-radius: 100%;
-    margin: 0 auto;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    float: left;
+    margin: 0px 15px 10px 0px;
 }
 
 aside form input[type="text"] {
@@ -1100,7 +1129,7 @@ aside form input[type="submit"] {
     opacity: 0;
 }
 
-body.single h2.entry-title, body.search h2.entry-title {
+body.single h2.entry-title, body.search h2.entry-title, body.archive h2.entry-title {
     margin-bottom: 10px;
 }
 
@@ -1198,12 +1227,28 @@ body.single nav.navigation {
 .comment-list  li {
     list-style: none;
     margin-bottom: 25px;
+    float: left;
+    width: 100%;
 }
 
-..comment-list  li.bypostauthor {
+.comment-list  li.bypostauthor article {
     padding: 20px;
     background: #ecf9f1;
     border-left: 4px solid #85c39c;
+}
+
+#reply-title small {
+    margin-left: 10px;
+}
+
+#reply-title small a {
+    color: rgb(228, 95, 95);
+}
+
+.comment-list  li.bypostauthor .children article, .comment-list  li.bypostauthor .children {
+    padding: 0px;
+    background: #fff;
+    border-left: none;
 }
 
 .comments-area span.says, .comments-area .edit-link {
@@ -1316,10 +1361,11 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover {
 .page_up {
     background: url('img/icon_footer_arrow.svg') no-repeat 50% 50%;
     background-size: 100% auto;
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     margin: 0 auto;
     display: block;
+    opacity: 0.2;
 }
 
 .page_up:hover {
@@ -1328,7 +1374,7 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover {
 
 footer.site-footer {
     border-top: 1px solid #e0e0e0;
-    padding: 35px 0px;
+    padding: 20px 0px;
     margin: 0 auto;
     margin-top: 50px;
     max-width: 1200px;
@@ -1338,33 +1384,48 @@ footer.site-footer p {
     text-align: center;
     color: #c3c3c3;
     margin: 0px;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 }
 
-body.search form.search-form {
+body.search form.search-form, body.archive form.search-form, body.error404 form.search-form {
     width: 700px;
     margin: 0 auto;
 }
 
-body.search form.search-form input[type="submit"] {
+body.error404 form.search-form {
+    margin: 40px auto;
+}
+
+section.error-404 {
+    margin-top: -30px;
+    margin-bottom: 50px;
+    width: 100%;
+    float: left;
+}
+
+body.error404 .page-header h1, body.error404 .page-header p {
+    text-align: center;
+} 
+
+body.search form.search-form input[type="submit"], body.archive form.search-form input[type="submit"], body.error404 form.search-form input[type="submit"] {
     float: left;
     margin-top: 0px;
     margin-left: 15px;
 }
 
-body.search form.search-form input[type="search"] {
+body.search form.search-form input[type="search"], body.archive form.search-form input[type="search"], body.error404 form.search-form input[type="search"] {
     float: left;
     padding: 9px 13px;
     width: 80%;
 }
 
-body.search header.page-header {
+body.search header.page-header, body.archive header.page-header {
     width: 100%;
     margin-bottom: 55px;
     float: left;
 }
 
-body.search article {
+body.search article, body.archive article {
     width: 26%;
     float: left;
     margin: 0px 35px;
@@ -1373,24 +1434,24 @@ body.search article {
     overflow: hidden;
 }
 
-body.search h2.entry-title {
+body.search h2.entry-title, body.archive h2.entry-title {
     margin-bottom: 0px;
     line-height: 1.8rem;
 }
 
-body.search h2.entry-title a{
+body.search h2.entry-title a, body.archive h2.entry-title a {
     font-size: 1.3rem;
 }
 
-body.search .entry-meta {
+body.search .entry-meta, body.archive .entry-meta {
     margin-bottom: 10px;
 }
 
-body.search .entry-meta span {
+body.search .entry-meta span, body.archive .entry-meta span {
     font-size: 0.75rem;
 }
 
-body.search article img {
+body.search article img, body.archive article img {
     height: 100%;
 }
 
@@ -1432,6 +1493,8 @@ span.article_meta_tags a:hover {
     margin: 0px;
 }
 
+/* Begin Easy Recipe CSS */
+
 div.easyrecipe {
     border: none;
     padding: 0px !important;
@@ -1470,25 +1533,117 @@ body.single .entry-content ul, body.single .entry-content ol {
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 1040px) { 
-    .about_photo {width: 150px; height: 150px;}
+.easyrecipe .divERSHeadItems {
+    margin-bottom: 35px !important;
+}
+
+.ERComment .ERRateBG {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+/* End Easy Recipe CSS */
+
+.ssba {
+    float: left;
+}
+
+.moretag {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background: #b3dac1;
+    color: #fff !important;
+    text-decoration: none;
+    width: 160px;
+    padding: 5px 0px;
+    font-size: 0.8rem;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+.moretag:hover {
+    background: #85c39c;
+    transition: 0.2s;
+}
+
+/* pagination */
+.pagination_nav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.pagination_nav li a,
+.pagination_nav li a:hover,
+.pagination_nav li.active a,
+.pagination_nav li.disabled {
+    color: #fff;
+    text-decoration: none;
+}
+
+.pagination_nav li {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: 4px;
+}
+
+.pagination_nav li a,
+.pagination_nav li a:hover,
+.pagination_nav li.active a,
+.pagination_nav li.disabled {
+    background: #fff;
+    border-radius: 100%;
+    color: #000;
+    cursor: pointer;
+    padding: 12px;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+}
+
+.pagination_nav li a:hover,
+.pagination_nav li.active a {
+    background: #000;
+    color: #fff;
+}
+
+.pagination_nav li.prev_link a, .pagination_nav li.next_link a {
+    color: #000;
+    background: transparent;
+    padding: 0px;
+}
+
+.pagination_nav li.prev_link a:hover, .pagination_nav li.next_link a:hover {
+    text-decoration: underline;
+}
+
+body.archive .pagination_nav, body.search .pagination_nav {
+    float: left;   
+    width: 100%; 
+    clear: both;
+    margin: 20px 0px 50px 0px;
+} 
+
+body.archive .pagination_nav ul, body.search .pagination_nav ul {
+    text-align: center;
 }
 
 @media screen and (max-width: 990px) { 
-    body.search article {margin: 0px 25px; margin-bottom: 50px;}
+    body.search article, body.archive article {margin: 0px 25px; margin-bottom: 50px;}
 }
 
 @media screen and (max-width: 860px) { 
     div#primary {width: 100%;}
     aside#secondary {width: 100%;}
-    .about_photo {width: 200px; height: 200px;}
     .main-navigation ul {display: block !important;}
     .menu-toggle {display: none !important;}
+    .aside_buttons {margin-top: 10px;}
 }
 
 @media screen and (max-width: 760px) { 
-    body.search article {width: 40%;}
-    body.search form.search-form {width: 100%;}
+    body.search article, body.archive article {width: 40%;}
+    body.search form.search-form, body.archive form.search-form, body.error404 form.search-form {width: 100%;}
 }
 
 @media screen and (max-width: 670px) {
@@ -1496,8 +1651,8 @@ body.single .entry-content ul, body.single .entry-content ol {
 }
 
 @media screen and (max-width: 600px) {
-    body.search form.search-form input[type="search"] {width: 70%;}
-    body.search article {width: 100%; margin: 0px 0px 50px 0px !important;}
+    body.search form.search-form input[type="search"], body.archive form.search-form input[type="search"], body.error404 form.search-form input[type="search"] {width: 70%;}
+    body.search article, body.archive article {width: 100%; margin: 0px 0px 50px 0px !important;}
 }
 
 @media screen and (max-width: 520px) {
@@ -1505,5 +1660,5 @@ body.single .entry-content ul, body.single .entry-content ol {
 }
 
 @media screen and (max-width: 390px) {
-    body.search form.search-form input[type="search"] {width: 150px;}
+    body.search form.search-form input[type="search"], body.archive form.search-form input[type="search"], body.error404 form.search-form input[type="search"] {width: 150px;}
 }

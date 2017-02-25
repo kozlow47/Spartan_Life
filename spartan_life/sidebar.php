@@ -23,8 +23,13 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     </form>
 
     <div class="aside_me">
-        <a href="about" class="about_photo"></a>
-        <p>I'm Natalie, a fitness enthusiast and food lover. I fill these pages with healthy plant-based recipes, tales of my travels around the world, and workout tips & inspiration!</p>
+        <p>
+            <a href="about" class="about_photo"></a>
+            Hi, I'm Natalie! I fill these pages with simple, healthy plant-based recipes and tales of my travels around the world.
+        </p>
+        <div class="aside_buttons">
+            <a href="https://www.instagram.com/spartanlifeblog/" target="_blank">Follow</a>
+        </div>
     </div>
 
     <div class="aside_recent">
@@ -33,7 +38,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
         <div id="recent-posts">
             <div <?php post_class(); ?> id="featured-<?php the_ID(); ?>">
             <?php
-                $args = array( 'numberposts' => '10', 'meta_key' => '_thumbnail_id', 'post_status' => 'publish' );
+                $args = array( 'numberposts' => '10', 'meta_key' => '_thumbnail_id', 'post_status' => 'publish', 'orderby'=> 'title', 'order' => 'ASC' );
                 $recent_posts = wp_get_recent_posts( $args );
                 foreach ( $recent_posts as $recent ) {
                     if ( has_post_thumbnail( $recent["ID"] ) ) {
@@ -46,6 +51,8 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
             ?>
             </div>
         </div>
+    </div>
+
     <div class="aside_insta">
         <h4>Instagram</h4>
         <?php dynamic_sidebar( 'sidebar-1' ); ?>
