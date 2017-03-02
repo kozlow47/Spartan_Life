@@ -38,7 +38,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
         <div id="recent-posts">
             <div <?php post_class(); ?> id="featured-<?php the_ID(); ?>">
             <?php
-                $args = array( 'numberposts' => '3', 'meta_key' => '_thumbnail_id', 'post_status' => 'publish', 'orderby' => 'title', 'order' => 'DESC', 'category_name' => 'Recipes' );
+                $args = array( 'numberposts' => '2', 'meta_key' => '_thumbnail_id', 'post_status' => 'publish', 'orderby' => 'rand', 'category_name' => 'Recipes' );
                 $recent_posts = wp_get_recent_posts( $args );
                 foreach ( $recent_posts as $recent ) {
                     if ( has_post_thumbnail( $recent["ID"] ) ) {

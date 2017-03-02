@@ -1502,7 +1502,12 @@ div.easyrecipe {
     color: #404040;
     font-size: 0.9rem;
     line-height: 1.5rem;
-    margin-bottom: 25px;
+    float: left;
+    margin: 20px 0px 25px 0px;
+}
+
+.easyrecipe ol, .easyrecipe ul {
+    width: 100%;
 }
 
 .easyrecipe .ERSName {
@@ -1515,7 +1520,7 @@ div.easyrecipe {
 .easyrecipe .ERSIngredients .ERSIngredientsHeader.ERSHeading, .easyrecipe .ERSIngredients .ERSIngredientsHeader, .easyrecipe .ERSInstructions .ERSInstructionsHeader, .easyrecipe .nutrition .ERSNutritionHeader, .easyrecipe div .ERSNotesHeader {
     color: #404040;
     font-family: 'Open Sans', Helvetica, sans-serif !important;
-    font-size: 1.25rem;
+    font-size: 1.35rem !important;
 }
 
 body.single .entry-content ul, body.single .entry-content ol {
