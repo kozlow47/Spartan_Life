@@ -1002,6 +1002,7 @@ aside#secondary {
     text-decoration: none;
     font-size: 2.2rem;
     font-weight: 100;
+    text-transform: capitalize;
 }
 
 .entry-title a:hover {
@@ -1421,7 +1422,7 @@ body.search form.search-form input[type="search"], body.archive form.search-form
 
 body.search header.page-header, body.archive header.page-header {
     width: 100%;
-    margin-bottom: 55px;
+    margin-bottom: 75px;
     float: left;
 }
 
@@ -1429,22 +1430,24 @@ body.search article, body.archive article {
     width: 26%;
     float: left;
     margin: 0px 35px;
-    height: 270px;
-    margin-bottom: 50px;
+    height: 265px;
+    margin-bottom: 40px;
     overflow: hidden;
 }
 
 body.search h2.entry-title, body.archive h2.entry-title {
     margin-bottom: 0px;
-    line-height: 1.8rem;
+    line-height: 1.45rem;
+    margin-top: 8px;
 }
 
 body.search h2.entry-title a, body.archive h2.entry-title a {
-    font-size: 1.3rem;
+    font-size: 1.23rem;
+    text-transform: capitalize;
 }
 
 body.search .entry-meta, body.archive .entry-meta {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 body.search .entry-meta span, body.archive .entry-meta span {
@@ -1452,7 +1455,7 @@ body.search .entry-meta span, body.archive .entry-meta span {
 }
 
 body.search article img, body.archive article img {
-    height: 100%;
+    height: auto;
 }
 
 .none {
@@ -1621,6 +1624,17 @@ body.single .entry-content ul, body.single .entry-content ol {
 
 .pagination_nav li.prev_link a:hover, .pagination_nav li.next_link a:hover {
     text-decoration: underline;
+}
+
+.grid_image {
+    display: block;
+    height: 185px;
+    overflow: hidden;
+}
+
+.grid_image img {
+    width: 100%;
+    margin-top: -5%;
 }
 
 body.archive .pagination_nav, body.search .pagination_nav {
