@@ -1699,6 +1699,11 @@ body.archive .pagination_nav ul, body.search .pagination_nav ul {
     .aside_buttons {margin-top: 10px;}
 }
 
+@media screen and (max-width: 780px) { 
+    .contain_cat_search {width: 100%;}
+    body.search header.page-header, body.archive header.page-header {padding: 0px 20px;}
+}
+
 @media screen and (max-width: 760px) { 
     body.search article, body.archive article {width: 40%;}
     body.search form.search-form, body.archive form.search-form, body.error404 form.search-form {width: 100%;}
@@ -1711,6 +1716,7 @@ body.archive .pagination_nav ul, body.search .pagination_nav ul {
 @media screen and (max-width: 600px) {
     body.search form.search-form input[type="search"], body.archive form.search-form input[type="search"], body.error404 form.search-form input[type="search"] {width: 70%;}
     body.search article, body.archive article {width: 100%; margin: 0px 0px 50px 0px !important;}
+    body.search header.page-header, body.archive header.page-header {padding: 0px;}
 }
 
 @media screen and (max-width: 520px) {
@@ -1718,5 +1724,5 @@ body.archive .pagination_nav ul, body.search .pagination_nav ul {
 }
 
 @media screen and (max-width: 390px) {
-    body.search form.search-form input[type="search"], body.archive form.search-form input[type="search"], body.error404 form.search-form input[type="search"] {width: 150px;}
+    body.search form.search-form input[type="search"], body.archive form.search-form input[type="search"], body.error404 form.search-form input[type="search"] {width: 60%;}
 }

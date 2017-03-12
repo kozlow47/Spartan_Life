@@ -20,7 +20,7 @@ get_header(); ?>
                     <?php
                         get_search_form();
                     ?>
-                    <?php if (is_category( 'Recipes' )) { ?>
+                    <?php if (is_category('Recipes') or is_tag('Breakfast') or is_tag('Entrée') or is_tag('Dessert')) { ?>
                         <ul class="filter_archive_tags">
                             <li>Filter By:</li>
                             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/tag/breakfast">Breakfast</a></li>
@@ -28,7 +28,7 @@ get_header(); ?>
                             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/tag/dessert">Dessert</a></li>
                             <!-- <li><a href="<?php #echo esc_url( home_url( '/' ) ); ?>/tag/snack">Snack</a></li> -->
                         </ul>
-                    <?php } elseif (is_category( 'Travel' )) { ?>
+                    <?php } elseif (is_category('Travel') or is_tag('North America') or is_tag('Europe') or is_tag('Asia')) { ?>
                         <ul class="filter_archive_tags">
                             <li>Filter By:</li>
                             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/tag/north-america">North America</a></li>
