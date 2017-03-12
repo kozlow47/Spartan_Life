@@ -1637,6 +1637,45 @@ body.single .entry-content ul, body.single .entry-content ol {
     margin-top: -5%;
 }
 
+.contain_cat_search {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.filter_archive_tags {
+    padding: 0px;
+    margin: 0 auto;
+    width: 700px;
+    display: block;
+    float: left;
+    margin-top: 3px;
+}
+
+.filter_archive_tags li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 auto !important;
+    padding: 0px 0px 0px 5px;
+    font-size: 0.8rem;
+    font-family: Times New Roman, Georgia, sans-serif;
+    color: #cacaca;
+    font-style: italic;
+}
+
+.filter_archive_tags li a {
+    text-decoration: none;
+    font-style: italic;
+    color: #85c39c;
+    font-family: Times New Roman, Georgia, sans-serif;
+    font-weight: 100;
+    font-size: 0.8rem;
+    padding: 0px 2px;
+}
+
+.filter_archive_tags li a:hover {
+    text-decoration: underline;
+}
+
 body.archive .pagination_nav, body.search .pagination_nav {
     float: left;   
     width: 100%; 
