@@ -1178,6 +1178,7 @@ body.single .entry-content ul, body.single .entry-content ol {
 body.single .entry-content ul li, body.single .entry-content ol li {
     margin-bottom: 15px;
     line-height: 1.9rem;
+    margin-left: 35px;
 }
 
 .greyInstruct {
@@ -1204,6 +1205,7 @@ body.single .entry-content ul li, body.single .entry-content ol li {
 
 body.single h1.entry-title {
     margin-bottom: 10px;
+    line-height: 3.3rem;
 }
 
 body.single h1.entry-title a {
