@@ -28,7 +28,8 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
             Hi, I'm Natalie! I fill these pages with simple, healthy plant-based recipes and tales of my travels around the world.
         </p>
         <div class="aside_buttons">
-            <a href="https://www.instagram.com/spartanlifeblog/" target="_blank">Follow</a>
+            <a href="https://www.instagram.com/spartanlifeblog/" target="_blank">Instagram</a>
+            <a href="https://www.pinterest.com/spartanlifeblog/" target="_blank">Pinterest</a>
         </div>
     </div>
 

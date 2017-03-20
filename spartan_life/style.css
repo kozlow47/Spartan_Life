@@ -984,7 +984,7 @@ header#masthead {
 
 div.site-content {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1150px;
 }
 
 div#primary {
@@ -995,7 +995,7 @@ div#primary {
 aside#secondary {
     float: right;
     width: 25%;
-    margin-top: 97px;
+    margin-top: 99px;
 }
 
 .entry-title a {
@@ -1064,11 +1064,11 @@ aside#secondary h4 {
 .aside_buttons {
     width: 100%;
     float: left;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 .aside_buttons a {
-    width: 100%;
+    width: 49%;
     text-align: center;
     background: #b3dac1;
     color: #fff !important;
@@ -1079,6 +1079,14 @@ aside#secondary h4 {
     text-decoration: none;
     display: inline-block;
     transition: 0.2s;
+}
+
+.aside_buttons a:first-child {
+    float: left;
+}
+
+.aside_buttons a:last-child {
+    float: right;
 }
 
 .aside_buttons a:hover {

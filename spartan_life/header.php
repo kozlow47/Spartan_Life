@@ -14,6 +14,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="p:domain_verify" content="15072a68df944f7cbdcaca116c33c920"/>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
